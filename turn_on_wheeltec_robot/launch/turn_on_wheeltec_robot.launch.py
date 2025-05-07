@@ -93,15 +93,15 @@ def generate_launch_description():
     #senior_4wd_bs_robot/senior_4wd_dl_robot/flagship_4wd_bs_robot/flagship_4wd_dl_robot/top_4wd_bs_robot/top_4wd_dl_robot
     #senior_diff_robot/four_wheel_diff_bs/four_wheel_diff_dl/flagship_four_wheel_diff_bs_robot/flagship_four_wheel_diff_dl_robot
     #!!!At the same time, you need to modify ld.add_action(flagship_type) and #ld.add_action(minibot_type)
-    flagship_type = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(os.path.join(launch_dir, 'robot_mode_description.launch.py')),
-            launch_arguments={'senior_mec_bs': 'true'}.items(),
-    )
+#     flagship_type = IncludeLaunchDescription(
+#             PythonLaunchDescriptionSource(os.path.join(launch_dir, 'robot_mode_description.launch.py')),
+#             launch_arguments={'senior_mec_bs': 'true'}.items(),
+#     )
     
     ld = LaunchDescription()
 
     #ld.add_action(minibot_type)
-    ld.add_action(flagship_type)
+#     ld.add_action(flagship_type)
     ld.add_action(carto_slam_dec)
     ld.add_action(wheeltec_robot)
     ld.add_action(base_to_link)
